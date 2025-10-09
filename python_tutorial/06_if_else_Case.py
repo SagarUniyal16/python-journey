@@ -43,29 +43,3 @@ match seat_type:
     case _:
         print("invalid seat type")
         
-
-
-employees = {
-    "Sagar": {
-        "age": 25,
-        "salary": 50000,
-        "designation": "Software Engineer"
-    },
-    "Karan": {
-        "age": 28,
-        "salary": 65000,
-        "designation": "Senior Developer"
-    },
-    "Amit": {
-        "age": 30,
-        "salary": 70000,
-        "designation": "Data Engineer"
-    },
-    "Raj": {
-        "age": 26,
-        "salary": 55000,
-        "designation": "Backend Developer"
-    }
-}
-
-print(f"Age of Sagar is: {employees["Sagar"]["age"]}")
