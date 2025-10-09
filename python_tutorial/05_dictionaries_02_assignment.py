@@ -32,6 +32,7 @@ print(customer.popitem())
 print(customer.get("Membership", "None"))
 
 # Step 9: Update dictionary with "address"
+# we can use update when we want to update or add multiple fields in single command
 customer.update({"address": "221B Baker Street"})
 
 # Step 10: Print final dictionary
