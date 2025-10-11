@@ -5,7 +5,7 @@ def generate_invoice(customer_name: str="Guest", *items: str, **charges: float) 
         if items:
             result.append("Items:")
             for item in items:
-                result.append(f"-{item}")
+                result.append(f"- {item}")
         
         if charges:
             result.append("Charges:")
