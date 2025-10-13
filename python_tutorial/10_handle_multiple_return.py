@@ -33,3 +33,4 @@ def chai_report():
 sold, remaining, not_paid = chai_report()
 print("Sold: ", sold)
 print("Remaining: ", remaining)
+prin
