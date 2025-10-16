@@ -17,6 +17,7 @@ def serve_chai():
     yield "Cup 3: Elaichi Chai"
 
 stall = serve_chai()
+print(stall)
 
 for cup in stall:
     print(cup)
@@ -43,7 +44,7 @@ print(next(chai))
 def infinite_chai():
     count = 1
     while True:
-        yield f"Refil #{count}"
+        yield f"Refill #{count}"
         count += 1
 
 refill = infinite_chai()
@@ -98,6 +99,7 @@ def chai_stall():
 
 
 stall = chai_stall()
+print(next(stall))
 print(next(stall))
 stall.close() #cleanup
 
