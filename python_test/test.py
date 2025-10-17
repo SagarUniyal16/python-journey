@@ -1,16 +1,15 @@
 from functools import wraps
 
-def log_activity(func):
+def decoratorss(func):
     @wraps(func)
-    def wrapper(*args, **kwargs):
-        print(f"🚀 Calling: {func.__name__}")
-        result=func(*args, **kwargs)
-        print(f"✅ Finished: {func.__name__}")
-        return result
+    def wrapper():
+        print("Before function")
+        func()
+        print("After function")
     return wrapper
 
-@log_activity
-def brew_chai(type, milk="no"):
-    print(f"Brewing {type} chai and milk status {milk}")
+@decoratorss
+def print_name():
+    print("My name is Sagar")
 
-brew_chai("Masala")
+print_name()
