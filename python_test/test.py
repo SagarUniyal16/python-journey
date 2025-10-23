@@ -25,6 +25,8 @@ class EmployeeManager:
         return self.employees.get(emp_id)
 
 # --- Using the classes ---
+emp1=Employee(23, "Aman", 30000)
+print(emp1)
 manager = EmployeeManager()
 manager.add_employee(1, "Sagar", 50000)
 manager.add_employee(2, "Riya", 60000)
