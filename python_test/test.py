@@ -1,30 +1,35 @@
-def info(*args,**kwargs):
-    T=()
-    D={}
-    T=args
-    D=kwargs
-    return T,D
+# ---- CLASS APPROACH ----
 
-T,D=info("Human","occupation",Name="Sagar Uniyal",Age=25)
+class Employee:
+    def __init__(self, emp_id, name, salary):
+        self.emp_id = emp_id
+        self.name = name
+        self.salary = salary
 
-print(T)
-print(D)
+    def update_salary(self, new_salary):
+        self.salary = new_salary
+        print(f"Salary updated for {self.name}")
 
-from functools import wraps
-
-def decoratorss(func):
-    @wraps(func)
-    def wrapper():
-        print("Before function")
-        func()
-        print("After function")
-    return wrapper
-
-@decoratorss
-def print_name():
-    print("My name is Sagar")
-
-print_name()
+    def get_details(self):
+        return {"id": self.emp_id, "name": self.name, "salary": self.salary}
 
 
+# --- Managing employees collectively ---
+class EmployeeManager:
+    def __init__(self):
+        self.employees = {}
 
+    def add_employee(self, emp_id, name, salary):
+        self.employees[emp_id] = Employee(emp_id, name, salary)
+
+    def get_employee(self, emp_id):
+        return self.employees.get(emp_id)
+
+# --- Using the classes ---
+manager = EmployeeManager()
+manager.add_employee(1, "Sagar", 50000)
+manager.add_employee(2, "Riya", 60000)
+
+emp = manager.get_employee(1)
+emp.update_salary(55000)
+print(emp.get_details())
