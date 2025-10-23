@@ -13,6 +13,7 @@ class Employee:
     def get_details(self):
         return {"id": self.emp_id, "name": self.name, "salary": self.salary}
 
+
 # --- Managing employees collectively ---
 class EmployeeManager:
     def __init__(self):
